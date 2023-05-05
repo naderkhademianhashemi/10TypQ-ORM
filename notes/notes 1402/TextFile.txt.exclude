@@ -1,0 +1,28 @@
+﻿add [QueIsActive] [bit]
+
+view name change
+	V_Answers
+	V_Instance_Branch_Answers
+
+TABLE [dbo].[Question_Type]
+	Question_Type Description
+	------------- ------------------------------
+	...                
+	8             چندگزینه ای چند جوابی و متنی  
+	9             چندگزینه ای تک جوابی و متنی   
+	10            چندگزینه ای آبشاری و متنی 
+
+2-changes orm_types
+
+3-changes HTML_Forms
+
+4-changes NewQuestion question cs FillFormerNewQ..
+
+5 showForm 
+	CommandName Show_Instance
+
+change array list
+
+formInstance
+	returnString
+	returnLstring

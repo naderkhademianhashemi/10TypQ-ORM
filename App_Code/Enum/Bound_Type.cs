@@ -1,0 +1,1 @@
+﻿public enum Bound_Type { Goal, Danger, Alarm };

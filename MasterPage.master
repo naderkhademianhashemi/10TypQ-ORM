@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>سامانه ریسک عملیاتی</title>
+    <link href="/css/tatStyleSheet.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+<script language="javascript">AC_FL_RunContent = 0;</script>
+
+
+<script src="css/AC_RunActiveContent.js" language="javascript"></script>
+    <script type="text/javascript" src="css/stlib.js"></script>
+    <style type="text/css">
+        .style2 {
+            width: 88%;
+        }
+
+        .style3 {
+            width: 88%;
+            height: 168px;
+        }
+
+        .style6 {
+            width: 231px;
+            height: 584px;
+        }
+
+        .style7 {
+            width: 800px;
+            height: 584px;
+        }
+    </style>
+    </head>
+<body style="background-color: #ffffff;">
+    <form id="form1" dir="rtl" align="center"  runat="server" style="text-align:center; padding: 0px 0px 0px 0px;">
+    <div align="center" >
+        <%-- class ="logo" --%>
+                <table width="1000px" class ="logo"
+                    <tr style="height: 23px;">
+                        <td class="style2" dir="ltr">
+                            <asp:LoginView ID="LoginView1" runat="server">
+                                <LoggedInTemplate>
+                                    <asp:LoginName ID="LoginName1" runat="server" ForeColor="Black" />
+                                    &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                                    <asp:LoginStatus ID="LoginStatus1" runat="server" LoginText="ورود" LogoutText="خروج"
+                                        ForeColor="Black" LogoutAction="RedirectToLoginPage" 
+                                        LogoutPageUrl="~/Login.aspx" Font-Underline="True" 
+                                        />
+                                </LoggedInTemplate>
+                                <AnonymousTemplate>
+                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login.aspx" ForeColor="Black"
+                                        Font-Underline="True">ورود</asp:HyperLink>
+                                </AnonymousTemplate>
+                            </asp:LoginView>
+
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style3">
+                        </td>
+                    </tr>
+                </table>
+                <table width="1000px" cellpadding="0px" cellspacing="0px" align="center" 
+                    style="height: 402px; margin-top: 0px">
+                    <tr>
+                        <td dir="rtl" style="text-align: right; background-color: #F8FCFC;
+                            border: 1px none #dddddd;" valign="top" class="style6">
+
+                            <script type="text/javascript" src="css/test.js"></script>
+
+                        </td>
+                        <td style="border: 1px none #dddddd; margin: 50px; padding: 20px;"
+                            valign="top" class="style7">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                </table>
+                <table width="1000px" border="0" cellpadding="0" cellspacing="0" 
+                    style="height: 66px; margin-top: 0px;">
+                    <tr>
+                        <td class="footer">
+                            <table cellpadding="0" cellspacing="0" width="1000">
+                                <tr style="height:110px">
+                <asp:Literal ID="litMessage" runat="server" ></asp:Literal>
+                                    
+                                    
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+   </div>
+        
+    </form>
+
+    <script src="/jquery.min.js" type="text/javascript"></script>
+<link href="/persianDatepicker/persianDatePicker-default.css" 
+rel="stylesheet" type="text/css"/>
+
+ <script src="/persianDatepicker/persianDatepicker.js" 
+type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $(".persianDate").persianDatepicker({ formatDate: "YYYY/0M/0D" });
+    });
+</script>
+</body>
+</html>
